@@ -1,565 +1,132 @@
-# 🚀 GenAI Full Stack Engineering – 1 Week Intensive Bootcamp
-
-> **Objective:** Cover the complete GenAI Full Stack roadmap in **7 intensive days**. This plan is designed to provide a solid understanding of each topic and culminates in building an end-to-end AI application.
-
-> **Recommended Study Time:** **10–12 Hours/Day**
+Here is your streamlined **Day 1 to Day 6** repository plan. Each day gives you the exact target folder, topics, hands-on tasks, and files to commit to GitHub.
 
 ---
 
-# 📅 Day 1 – Foundations of AI & Deep Learning
+### **Day 1: Deep Learning & Generative Vision**
 
-## 🎯 Goal
+* **Folder**: `01_deep_learning_foundations/` & `02_generative_vision/`
+* **Topics**: Neural Networks, backpropagation, CNNs, VAEs, DCGANs, and Latent Diffusion.
 
-Understand the fundamentals of Artificial Intelligence, Deep Learning, and Computer Vision.
 
----
+* **Tasks**:
+1. Write a PyTorch script for an image classifier using CNNs.
 
-## 📖 Topics
 
-### Artificial Intelligence
+2. Implement a DCGAN to generate synthetic images on MNIST/digits.
 
-- What is Artificial Intelligence?
-- AI vs Machine Learning vs Deep Learning vs Generative AI
-- Discriminative Models vs Generative Models
-- Industry Use Cases
-  - Healthcare
-  - Finance
-  - Manufacturing
-  - Retail
-  - Education
 
----
 
-### Deep Learning
 
-- Neural Networks
-- Perceptrons
-- Layers
-- Activation Functions
-- Forward Propagation
-- Backpropagation
-- Loss Functions
-- Gradient Descent
-- SGD
-- Adam
-- AdamW
+* **Files to Commit**:
+* `01_cnn_classifier.ipynb`
+
+* `02_dcgan_mnist.ipynb`
+
+
+
 
 ---
 
-### Frameworks
+### **Day 2: Transformers, Prompting & Hugging Face**
 
-- PyTorch Basics
-- TensorFlow Basics
-- Tensor Operations
+* **Folder**: `03_transformers_and_prompting/` & `04_huggingface_ecosystem/`
+* **Topics**: Self-attention, BERT/GPT architectures, prompt engineering (CoT, Few-shot), Hugging Face Pipelines, and GGUF/AWQ quantization.
 
----
 
-### Computer Vision
+* **Tasks**:
+1. Build a script calling OpenAI/Groq APIs for structured JSON outputs and prompt chains.
 
-- CNN Architecture
-- Feature Extraction
-- Pooling
-- Convolution Layers
 
----
+2. Load and run an open-source Hugging Face model pipeline for text summarization.
 
-## 🛠 Hands-on
 
-- Install Python
-- Install PyTorch
-- Install TensorFlow
-- Create CNN Image Classifier
 
----
 
-## 📂 Project
+* **Files to Commit**:
+* `03_structured_prompts.py`
 
-```
-01_cnn_image_classifier.ipynb
-```
+* `04_hf_pipelines.ipynb`
+
+
+
 
 ---
 
-# 📅 Day 2 – Generative Vision & Transformers
+### **Day 3: Fine-Tuning LLMs (PEFT & QLoRA)**
 
-## 🎯 Goal
+* **Folder**: `05_peft_and_finetuning/`
+* **Topics**: Full Fine-Tuning vs. PEFT, LoRA rank matrices ($A \times B$), 4-bit NormalFloat (NF4), and supervised fine-tuning (SFT) with `TRL`.
+* **Tasks**:
+1. Fine-tune an open-source LLM (e.g., Llama-3-8B or Mistral-7B) on a custom Q&A dataset using Google Colab (Free T4 GPU).
 
-Learn how modern Generative AI models work.
 
----
+* **File to Commit**:
+* `05_qlora_finetune.ipynb`
 
-## 📖 Topics
 
-### Variational Autoencoders
-
-- Encoder
-- Decoder
-- Latent Space
-- KL Divergence
 
 ---
 
-### GANs
+### **Day 4: Vector DBs, Embeddings & RAG Systems**
 
-- Generator
-- Discriminator
-- Minimax Loss
-- DCGAN
-- CycleGAN
-- StyleGAN
+* **Folder**: `06_vector_dbs_and_rag/`
+* **Topics**: Semantic vector embeddings, similarity metrics (Cosine, Euclidean), ChromaDB/FAISS, chunking strategies, and hybrid search.
 
----
 
-### Diffusion Models
+* **Tasks**:
+1. Build a Python script that reads custom PDFs, extracts vector embeddings into ChromaDB, and performs context-retrieved Q&A.
 
-- Stable Diffusion
-- Latent Diffusion
-- Noise Scheduler
-- ControlNet
 
----
 
-### Transformers
 
-- Attention Mechanism
-- Scaled Dot Product Attention
-- Multi Head Attention
-- Positional Encoding
-- Encoder
-- Decoder
-- GPT
-- BERT
-- T5
-- RoPE
-- KV Cache
+* **File to Commit**:
+* `06_pdf_rag_assistant.py`
+
+
+
 
 ---
 
-### Prompt Engineering
+### **Day 5: Orchestration & Autonomous AI Agents**
 
-- System Prompts
-- User Prompts
-- Zero Shot
-- Few Shot
-- Chain of Thought
-- Tree of Thought
-- Directional Prompting
+* **Folder**: `07_agents_and_orchestration/`
+* **Topics**: LangChain Expression Language (LCEL), memory management, ReAct agent framework, and multi-agent workflows (LangGraph/CrewAI).
 
----
 
-## 🛠 Hands-on
+* **Tasks**:
+1. Build an autonomous multi-step agent equipped with custom tools (e.g., web search, file processing).
 
-- Prompt Chaining
-- Transformer Playground
 
----
 
-## 📂 Project
 
-```
-03_structured_prompt_chaining.py
-```
+* **File to Commit**:
+* `07_multi_agent_workflow.py`
+
+
+
 
 ---
 
-# 📅 Day 3 – Open Source LLMs & Fine-Tuning
+### **Day 6: MLOps, API Deployment & Capstone Showcase**
 
-## 🎯 Goal
+* **Folder**: `08_eval_and_observability/`, `09_deployment_and_mlops/`, & `10_capstone_projects/`
+* **Topics**: RAG evaluation using `Ragas`, tracing via LangSmith, FastAPI REST endpoints, Streamlit/Gradio frontend, and Docker containerization.
 
-Understand open-source LLMs and parameter-efficient fine-tuning.
 
----
+* **Tasks**:
+1. Wrap your Day 4/5 RAG system in a **FastAPI** backend with a **Streamlit** interface.
 
-## 📖 Topics
 
-### Hugging Face
+2. Write a `Dockerfile` to containerize the application.
 
-- Hugging Face Hub
-- Datasets
-- Pipelines
-- Transformers Library
 
----
+3. Clean up and push your root `README.md`.
 
-### Open Source Models
 
-- Llama 3
-- Mistral
-- Phi
-- Qwen
-- Gemma
+* **Files to Commit**:
+* `08_ragas_evaluation.py`
+* `09_deployment/app/main.py`
+* `09_deployment/Dockerfile`
+* `10_capstone_project/`
 
----
-
-### Quantization
-
-- FP32
-- FP16
-- INT8
-- INT4
-- GGUF
-- GPTQ
-- AWQ
-
----
-
-### Fine-Tuning
-
-- Full Fine-Tuning
-- PEFT
-- LoRA
-- QLoRA
-- SFT
-- Dataset Preparation
-
----
-
-## 🛠 Hands-on
-
-- Hugging Face Summarizer
-- LoRA Demo
-
----
-
-## 📂 Projects
-
-```
-04_huggingface_text_summarizer.ipynb
-
-05_qlora_llama3_finetuning.ipynb
-```
-
----
-
-# 📅 Day 4 – Embeddings, Vector Databases & RAG
-
-## 🎯 Goal
-
-Learn Retrieval-Augmented Generation from scratch.
-
----
-
-## 📖 Topics
-
-### Embeddings
-
-- Semantic Embeddings
-- Cosine Similarity
-- Dot Product
-- Euclidean Distance
-
----
-
-### Vector Databases
-
-- ChromaDB
-- FAISS
-- Pinecone
-- Qdrant
-
----
-
-### RAG
-
-- Document Loading
-- Text Splitting
-- Chunking
-- Embeddings
-- Indexing
-- Retrieval
-- Prompt Construction
-
----
-
-### Advanced RAG
-
-- Hybrid Search
-- BM25
-- Dense Retrieval
-- Re-ranking
-- Context Compression
-- Metadata Filtering
-
----
-
-## 🛠 Hands-on
-
-Build a PDF Chatbot
-
----
-
-## 📂 Project
-
-```
-06_rag_pdf_assistant.py
-```
-
----
-
-# 📅 Day 5 – LangChain, LlamaIndex & AI Agents
-
-## 🎯 Goal
-
-Build AI workflows and autonomous agents.
-
----
-
-## 📖 Topics
-
-### LangChain
-
-- LCEL
-- Prompt Templates
-- Chains
-- Memory
-- Output Parsers
-
----
-
-### LlamaIndex
-
-- Document Loading
-- Data Connectors
-- Indexes
-- Query Engines
-
----
-
-### AI Agents
-
-- ReAct
-- Planning
-- Tool Calling
-- Function Calling
-- Memory
-
----
-
-### Multi-Agent Frameworks
-
-- LangGraph
-- CrewAI
-- AutoGen
-
----
-
-### MCP
-
-- Model Context Protocol
-- MCP Server
-- MCP Client
-- Tool Integration
-
----
-
-## 🛠 Hands-on
-
-Build Multi-Agent Research Assistant
-
----
-
-## 📂 Project
-
-```
-07_multi_agent_researcher.py
-```
-
----
-
-# 📅 Day 6 – Evaluation, Guardrails & Deployment
-
-## 🎯 Goal
-
-Learn how production AI systems are evaluated and deployed.
-
----
-
-## 📖 Topics
-
-### Evaluation
-
-- Ragas
-- Faithfulness
-- Context Precision
-- Context Recall
-- Answer Relevance
-
----
-
-### Observability
-
-- LangSmith
-- Phoenix
-- Tracing
-- Token Usage
-- Latency Monitoring
-
----
-
-### Guardrails
-
-- Prompt Injection
-- Jailbreak Protection
-- PII Masking
-- Output Filtering
-
----
-
-### Deployment
-
-- FastAPI
-- Streamlit
-- Docker
-- Docker Compose
-- Ollama
-- vLLM
-- TensorRT-LLM
-
----
-
-## 🛠 Hands-on
-
-Dockerize a FastAPI Application
-
----
-
-## 📂 Project
-
-```
-09_dockerized_rag_fastapi_app/
-```
-
----
-
-# 📅 Day 7 – Enterprise Capstone Project
-
-## 🎯 Goal
-
-Integrate everything learned into a single production-ready application.
-
----
-
-# 🚀 Build
-
-## Enterprise PDF RAG Assistant
-
----
-
-## Features
-
-- PDF Upload
-- OCR Support (Optional)
-- Text Extraction
-- Chunking
-- Embeddings
-- Vector Database
-- Retrieval
-- OpenAI / Llama Integration
-- Chat Interface
-- Memory
-- Source Citations
-- FastAPI Backend
-- Streamlit Frontend
-- Docker Deployment
-
----
-
-## Bonus Features
-
-- Multi Document Support
-- Multi-Agent Workflow
-- LangSmith Monitoring
-- User Authentication
-- Logging
-- Evaluation Dashboard
-
----
-
-## 📂 Final Project
-
-```
-enterprise_pdf_rag/
-
-├── backend/
-├── frontend/
-├── ingestion/
-├── embeddings/
-├── vector_db/
-├── llm/
-├── rag/
-├── agents/
-├── evaluation/
-├── deployment/
-└── docker/
-```
-
----
-
-# 📅 Daily Schedule
-
-| Time | Activity |
-|------|----------|
-| 08:00 – 10:00 | Theory |
-| 10:00 – 12:00 | Documentation |
-| 12:00 – 01:00 | Break |
-| 01:00 – 04:00 | Coding |
-| 04:00 – 06:00 | Hands-on Project |
-| 06:00 – 07:00 | Break |
-| 07:00 – 09:00 | Revision & Notes |
-| 09:00 – 10:00 | GitHub Commit & README Update |
-
----
-
-# 📚 Resources
-
-## Documentation
-
-- Python Documentation
-- PyTorch Documentation
-- TensorFlow Documentation
-- Hugging Face Documentation
-- LangChain Documentation
-- LlamaIndex Documentation
-- FastAPI Documentation
-- Docker Documentation
-- OpenAI API Documentation
-
----
-
-# ✅ Deliverables
-
-- CNN Image Classifier
-- Prompt Chaining Project
-- Hugging Face Summarizer
-- QLoRA Fine-Tuning Demo
-- PDF RAG Assistant
-- Multi-Agent Research Assistant
-- Dockerized FastAPI App
-- Enterprise PDF RAG Chatbot
-- Complete GitHub Repository
-- Project Documentation
-
----
-
-# 🏆 Final Outcome
-
-After completing this bootcamp, you will have hands-on exposure to:
-
-- Artificial Intelligence
-- Deep Learning
-- Computer Vision
-- Transformers
-- Prompt Engineering
-- OpenAI APIs
-- Hugging Face Ecosystem
-- Fine-Tuning with LoRA & QLoRA
-- Embeddings & Vector Databases
-- Retrieval-Augmented Generation (RAG)
-- LangChain & LlamaIndex
-- AI Agents & Multi-Agent Systems
-- Model Context Protocol (MCP)
-- LLM Evaluation & Observability
-- AI Guardrails & Security
-- FastAPI Deployment
-- Docker & Production MLOps
-- Enterprise GenAI Application Development
+* `README.md`
